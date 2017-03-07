@@ -1,0 +1,110 @@
+.lightly-container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  /* Fix of Webkit flickering */
+  z-index: 1;
+}
+
+.lightly-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-transform: translate3d(0px, 0, 0);
+  transform: translate3d(0px, 0, 0);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.lightly-container-vertical > .lightly-wrapper {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.lightly-slide {
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.lightly-pagination {
+    position: absolute;
+    text-align: center;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
+}
+.lightly-container-horizontal > .lightly-pagination-container {
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+}
+
+.lightly-container-vertical > .lightly-pagination-container{
+    right: 10px;
+    top: 50%;
+    -webkit-transform: translate3d(0px, -50%, 0);
+    transform: translate3d(0px, -50%, 0);
+}
+
+.lightly-container-horizontal > .lightly-pagination-container .lightly-pagination-item {
+    margin: 0 5px;
+}
+.lightly-container-vertical > .lightly-pagination-container .lightly-pagination-item {
+    margin: 5px 0;
+    display: block;
+}
+.lightly-pagination-item {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #000;
+    opacity: 0.2;
+}
+.lightly-pagination-item-active {
+    opacity: 1;
+    background: #007aff;
+}
+
+.lightly-button-prev, .lightly-button-next {
+    position: absolute;
+    top: 50%;
+    width: 20%;
+    padding-top: 20%;
+    height: 0;
+    overflow: hidden;
+    z-index: 10;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.lightly-button-next{
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAAG1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACUUeIgAAAACHRSTlMAENBgMPCgwCu5UCUAAABOSURBVEjHYxhUQMgAvzyjRjMBAzo68BuR0dHRTMAEAkYwaowaMWrESDYCpCCEgBWtDqMGjBow/A0AVSgh+PMb2AC8bghhwA/EHRgGKwAAkiBcs1Y3p0AAAAAASUVORK5CYII=);
+    right: 2%;
+    left: auto;
+}
+.lightly-button-prev{
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAAHlBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC3KG9qAAAACXRSTlMAMPBgENDAv1BFDqaHAAAASElEQVRIx2MYtICxhIACoakO+A3QnBmC34CZM2cQMGCmAQEDJo8aMGrACDAApECRUHabJDBqxKgRo0bgrZIoq9QYGFMYBhMAAIKWUjSBBiftAAAAAElFTkSuQmCC);
+    left: 2%;
+    right: auto;
+}
+.lightly-button-prev.lightly-button-disabled, .lightly-button-next.lightly-button-disabled {
+    opacity: 0.35;
+    pointer-events: none;
+}
+
