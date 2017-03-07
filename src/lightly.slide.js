@@ -21,7 +21,6 @@ lightlySlide.fn.init = function(container, params) {
         longSwipesRatio: 0.5,
         longSwipesMs: 300,
         followFinger: true,
-        threshold: 0,
         nextButton: null,
         prevButton: null,
         resistance: true,
@@ -40,7 +39,16 @@ lightlySlide.fn.init = function(container, params) {
         buttonDisabledClass: 'lightly-button-disabled',
         constomPaginationItem: false,
         runCallbacksOnInit:false,
-        autoplayDisableOnInteraction:false
+        autoplayDisableOnInteraction:false,
+        // onInit: function (lightlySlide),
+        // onSlideChangeStart: function (lightlySlide),
+        // onSlideChangeEnd: function (lightlySlide),
+        // onTransitionStart: function (lightlySlide),
+        // onTransitionEnd: function (lightlySlide),
+        // onTouchStart: function (lightlySlide, e),
+        // onTouchEnd: function (lightlySlide, e),
+        // onAutoplayStart: function (lightlySlide),
+        // onAutoplayStop: function (lightlySlide),
     }
     this.params = Object.assign(setting, params);
     var container = document.querySelector(container);
