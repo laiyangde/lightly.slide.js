@@ -1,6 +1,6 @@
 # lightly.slide.js
 纯javascript打造的滑动特效插件，面向手机、平板电脑等移动终端。
-html:
+##html:
     <div class="lightly-container">
         <div class="lightly-wrapper">
             <div class="lightly-slide">Slide 1</div>
@@ -16,9 +16,9 @@ html:
         <div class="lightly-button-next lightly-button-white"></div>
         <div class="lightly-button-prev lightly-button-white"></div>
     </div>
-基本使用：
+##基本使用：
 var lightly = lightlySlide('.lightly-container');
-带参数：
+##带参数：
 var lightly = lightlySlide('.lightly-container',{
         width:'',
         height:'',
@@ -57,7 +57,7 @@ var lightly = lightlySlide('.lightly-container',{
         // onAutoplayStop: function (lightlySlide),
     })
     
-参数说明：
+##参数说明：
   direction 类型：string  默认：horizontal  滑动方向，可设置水平(horizontal)或垂直(vertical)。
   initialSlide 类型：number 默认：0 设定初始化时slide的索引。
   autoplay, 类型：number 默认：0 自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换。
@@ -81,7 +81,7 @@ var lightly = lightlySlide('.lightly-container',{
   onAutoplayStart: function (lightlySlide) 回调函数，自动切换开始时执行
   onAutoplayStop: function (lightlySlide)
  
-属性
+##属性
    lightly.realIndex  当前活动块的索引 
    lightly.slideIndex  与pagination小圆点相对应
    其它输出了解
