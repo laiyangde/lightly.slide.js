@@ -50,7 +50,10 @@ lightlySlide.fn.init = function(container, params) {
         // onAutoplayStart: function (lightlySlide),
         // onAutoplayStop: function (lightlySlide),
     }
-    this.params = Object.assign(setting, params);
+    for(var key in params){
+        setting[key] = params[key];
+    }
+    this.params = setting;
     var container = document.querySelector(container);
     if (container === null) {
         throw new Error('can not found container');

@@ -27,7 +27,6 @@ lightlySlide.fn.init = function (container, params) {
         longSwipesRatio: 0.5,
         longSwipesMs: 300,
         followFinger: true,
-        threshold: 0,
         nextButton: null,
         prevButton: null,
         resistance: true,
@@ -48,7 +47,10 @@ lightlySlide.fn.init = function (container, params) {
         runCallbacksOnInit: false,
         autoplayDisableOnInteraction: false
     };
-    this.params = Object.assign(setting, params);
+    for (var key in params) {
+        setting[key] = params[key];
+    }
+    this.params = setting;
     var container = document.querySelector(container);
     if (container === null) {
         throw new Error('can not found container');

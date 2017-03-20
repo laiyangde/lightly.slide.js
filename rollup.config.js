@@ -17,7 +17,7 @@ export default {
   	babel({
       exclude: 'node_modules/**',
     }),
-    uglify(),
+    // uglify(),
     // eslint({
     //   exclude: [
     //     'src/styles/**',
@@ -25,7 +25,7 @@ export default {
     // }), 
   ],
   moduleName: 'lightly',
-  dest: 'dest/lightly.slide.min.js', // 输出文件
+  dest: 'dest/lightly.slide.js', // 输出文件
   sourceMap: false
 };
 
